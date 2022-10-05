@@ -1,3 +1,4 @@
+import Footer from "../component/Footer"
 import Header from "../component/Header"
 
 const HomePage = {
@@ -11,14 +12,7 @@ const HomePage = {
                     <h1>Home Page</h1>
                 </main>
                 <footer>
-                    <div className="logo">
-                        <img src="https://picsum.photos/100/50" alt="" />
-                    </div>
-                    <ul>
-                        <li>Site Map</li>
-                        <li>Site Map</li>
-                        <li>Site Map</li>
-                    </ul>
+                    ${Footer.render()}
                 </footer>
             </div>
         `
