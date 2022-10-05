@@ -1,6 +1,6 @@
-import Header from "../component/Header"
+import Header from "../component/Header";
 
-const HomePage = {
+const ProductPage = {
     render(){
         return /* html */`
             <div class="container">
@@ -8,7 +8,7 @@ const HomePage = {
                     ${Header.render()}
                 </header>
                 <main>
-                    <h1>Home Page</h1>
+                    <h1>Product Page</h1>
                 </main>
                 <footer>
                     <div className="logo">
@@ -24,5 +24,4 @@ const HomePage = {
         `
     }
 }
-
-export default HomePage
+export default ProductPage;

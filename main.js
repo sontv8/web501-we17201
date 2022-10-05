@@ -1,17 +1,18 @@
 import Navigo from 'navigo'
 import HomePage from './src/pages/home';
+import ProductPage from './src/pages/product';
 
-const router = new Navigo("/");
+const router = new Navigo("/",{linksSelector:"a"});
 const print = (content) => {
-  document.querySelector("#app").innerHTML = content;
+  document.querySelector("#app").innerHTML = content.render();
 }
 
 router.on({
   "/": () => {
-    print(HomePage.render());
+    print(HomePage);
   },
   "/products": () => {
-    print("Product Page");
+    print(ProductPage);
   },
   "/about": () =>{
     print("About Page");
