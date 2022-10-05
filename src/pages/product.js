@@ -1,4 +1,6 @@
 import Header from "../component/Header";
+import productList from "../data/products";
+console.log(productList);
 
 const ProductPage = {
     render(){
@@ -9,6 +11,20 @@ const ProductPage = {
                 </header>
                 <main>
                     <h1>Product Page</h1>
+                    
+                    <div className="products">
+                        ${
+                            productList.map((item)=>{
+                                return `
+                                    <div className="item">
+                                        <img src="${item.image}" alt="" />
+                                        <h3>${item.name}</h3>
+                                        <p>${item.price}</p>
+                                    </div>
+                                `
+                            }).join("")
+                        }
+                    </div>
                 </main>
                 <footer>
                     <div className="logo">

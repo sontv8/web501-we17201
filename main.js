@@ -16,6 +16,9 @@ router.on({
   },
   "/about": () =>{
     print("About Page");
+  },
+  "/admin/manage-product": ()=>{
+    print();
   }
 });
 
