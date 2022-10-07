@@ -15,9 +15,9 @@ const ProductPage = {
                     <div className="products">
                         ${
                             productList.map((item)=>{
-                                return `
+                                return /*html*/`
                                     <div className="item">
-                                        <img src="${item.image}" alt="" />
+                                        <a href="/products/${item.id}"><img src="${item.image}" alt="" /></a>
                                         <h3>${item.name}</h3>
                                         <p>${item.price}</p>
                                     </div>
