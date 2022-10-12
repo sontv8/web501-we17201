@@ -1,9 +1,13 @@
+import { getAll } from "../api/products";
 import Header from "../component/Header";
-import productList from "../data/products";
-console.log(productList);
+// import productList from "../data/products";
+// console.log(productList);
 
 const ProductPage = {
-    render(){
+    async render(){
+        const productList = (await getAll()).data;
+        // const productList = data.data;
+        console.log(productList);
         return /* html */`
             <div class="container">
                 <header>
@@ -18,8 +22,8 @@ const ProductPage = {
                                 return /*html*/`
                                     <div className="item">
                                         <a href="/products/${item.id}"><img src="${item.image}" alt="" /></a>
-                                        <h3>${item.name}</h3>
-                                        <p>${item.price}</p>
+                                        <h3>${item.title}</h3>
+                                        <p>${item.content}</p>
                                     </div>
                                 `
                             }).join("")
