@@ -1,10 +1,14 @@
-import productList from "../data/products"
+// import productList from "../data/products"
+
+import { getOne } from "../api/products";
 
 const DetailProduct = {
-    render(id){
-        const product = productList.find((item)=>{
-            return item.id == id;
-        })
+    async render(id){
+        const product = (await getOne(id)).data;
+        console.log(product);
+        // const product = productList.find((item)=>{
+        //     return item.id == id;
+        // })
         return /*html*/`
             <div>
                 <img src="${product.image}" alt="" />

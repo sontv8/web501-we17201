@@ -7,3 +7,9 @@ const instance = axios.create({
 export const getAll = () => {
     return instance.get(`/products`)
 }
+export const getOne = (id) => {
+    return instance.get(`/products/${id}`)
+}
+export const add = (newProduct)=>{
+    return instance.post(`/products`,newProduct)
+}
