@@ -13,3 +13,6 @@ export const getOne = (id) => {
 export const add = (newProduct)=>{
     return instance.post(`/products`,newProduct)
 }
+export const update = (item)=>{
+    return instance.put(`/products/${item.id}`,item);
+}

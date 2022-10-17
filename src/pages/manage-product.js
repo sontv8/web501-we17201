@@ -24,7 +24,7 @@ const ManageProduct = {
                                     <td><img src="${item.image}" alt="" /></td>
                                     <td>${item.content}</td>
                                     <td>
-                                        <a href="">Update Product</a>
+                                        <a href="/admin/products/${item.id}/update">Update Product</a>
                                     </td>
                                 </tr>
                             `
