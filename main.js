@@ -2,6 +2,7 @@ import Navigo from 'navigo'
 import AddNewProduct from './src/pages/add-new-product';
 import DetailProduct from './src/pages/detail-product';
 import HomePage from './src/pages/home';
+import ManageProduct from './src/pages/manage-product';
 import ProductPage from './src/pages/product';
 
 const router = new Navigo("/",{linksSelector:"a"});
@@ -23,7 +24,7 @@ router.on({
     print("About Page");
   },
   "/admin/manage-product": ()=>{
-    print();
+    print(ManageProduct);
   },
   "/admin/products/add": () =>{
     print(AddNewProduct)
