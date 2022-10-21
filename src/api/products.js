@@ -16,3 +16,7 @@ export const add = (newProduct)=>{
 export const update = (item)=>{
     return instance.put(`/products/${item.id}`,item);
 }
+// tạo phương thức xóa
+export const remove = (id) =>{
+    return instance.delete(`/products/${id}`);
+}

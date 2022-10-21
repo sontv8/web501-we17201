@@ -16,7 +16,7 @@ const AddNewProduct = {
         `
     },
     afterRender(){
-        document.querySelector("#add-new").addEventListener("submit", (e) => {
+        document.querySelector("#add-new").addEventListener("submit", async (e) => {
             e.preventDefault();
             const newProduct = {
                 title: document.querySelector("#title").value,
@@ -25,7 +25,8 @@ const AddNewProduct = {
             }
             console.log(newProduct);
 
-            add(newProduct);
+            await add(newProduct);
+            window.location.assign("/admin/manage-product"); //điều hướng về trang quản trị sản phẩm
         })
     }
 }
